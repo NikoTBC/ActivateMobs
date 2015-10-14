@@ -2,19 +2,34 @@
 
 namespace ActivateMobs;
 
+use pocketmine\level\Position;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\nbt\tag\Compound;
-use pocketmine\nbt\tag\Enum;
-use pocketmine\nbt\tag\Double;
-use pocketmine\nbt\tag\Float;
-use pocketmine\nbt\tag\Entity;
+use pocketmine\level\Level;
 use pocketmine\item\Item;
-use pocketmine\event\entity\EntitySpawnEvent;
-use pocketmine\utils\Config;
-use pocketmine\utils\Utils;
+use pocketmine\block\Block;
+use pocketmine\Player;
+use pocketmine\math\vector3;
+use pocketmine\entity\Zombie;
+use pocketmine\level\format\FullChunk;
+use pocketmine\scheduler\CallbackTask;
+use pocketmine\nbt\tag\Compound;
+use pocketmine\nbt\tag\Double;
+use pocketmine\nbt\tag\Enum;
+use pocketmine\nbt\tag\Float;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\scheduler\TaskHandler;
 
-use ActivateMobs\Entities\Cow;
+use ActivateMobs\Entities\Passive\Chicken;
+use ActivateMobs\Entities\Passive\Cow;
+use ActivateMobs\Entities\Passive\Pig;
+use ActivateMobs\Entities\Passive\Sheep;
+use ActivateMobs\Entities\Passive\Wolf;
+use ActivateMobs\Entities\Passive\Mooshroom;
+use ActivateMobs\Entities\Passive\Bat;
 
 class ActivateMobs extends PluginBase implements Listener{
 
