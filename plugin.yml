@@ -1,5 +1,5 @@
 name: ActivateMobs
 author: NikoTBC
 main: ActivateMobs\ActivateMobs
-version: 1.1.0
+version: 1.2.0
 api: [1.12.0]
