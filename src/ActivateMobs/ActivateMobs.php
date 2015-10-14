@@ -31,6 +31,14 @@ use ActivateMobs\Entities\Passive\Wolf;
 use ActivateMobs\Entities\Passive\Mooshroom;
 use ActivateMobs\Entities\Passive\Bat;
 
+use ActivateMobs\Entities\Hostile\Creeper;
+use ActivateMobs\Entities\Hostile\Skeleton;
+use ActivateMobs\Entities\Hostile\Spider;
+use ActivateMobs\Entities\Hostile\PigZombie;
+use ActivateMobs\Entities\Hostile\Slime;
+use ActivateMobs\Entities\Hostile\Enderman;
+use ActivateMobs\Entities\Hostile\Silverfish;
+
 class ActivateMobs extends PluginBase implements Listener{
 
 public function onLoad(){
